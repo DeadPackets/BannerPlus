@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "BannerPlus",
+  "description": "Makes banner better.",
+  "version": "0.1",
+  "icons": {
+    "128": "assets/icons/128.png"
+  },
+  "browser_action": {
+    "default_icon": "assets/icons/128.png",
+    "default_popup": "popup.html",
+    "default_title": "AutoCRN"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://banner.aus.edu/*"],
+      "js": ["/assets/jquery.slim.min.js", "content.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "*://banner.aus.edu/*"
+  ]
+}

@@ -1,0 +1,4 @@
+- First time setup
+- Multiple themes
+- Shortcuts
+- Improved css (big project)
