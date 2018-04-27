@@ -8,7 +8,7 @@ BannerPlus (Banner+) is a chrome extension that adds some tweaks to [AUS's Banne
 
 I am not responsible for you using this tool, and any actions AUS may or may not take against you. You are fully responsible for yourself when you download and install this extension. Consider yourself warned.
 
-## Features (so far)
+# Features (so far)
 
 * Persistent Login (Refreshing does not log you out + faster loading times)
 * Removing the AUS banner (Easier on the eyes + faster loading times)
@@ -18,7 +18,7 @@ I am not responsible for you using this tool, and any actions AUS may or may not
 * [BETA] Removing all images (Much faster loading times)
 * More coming soon!
 
-## FAQ (Frequently Asked Questions)
+# FAQ (Frequently Asked Questions)
 
 #### Can I get in trouble for using this?
 
@@ -32,7 +32,7 @@ Well, probably! See below for more information on how to request a feature.
 
 Sure, pay me a million AED in cash. (Actually no, because AUS clearly does not allow tools that speed up registration processes.)
 
-## How to Install
+# How to Install
 
 1. Download the latest version of BannerPlus as a zip file from the [latest release](https://github.com/DeadPackets/BannerPlus/releases/latest) (.zip version)
 2. Unzip the downloaded file into a folder named "BannerPlus"
@@ -40,7 +40,7 @@ Sure, pay me a million AED in cash. (Actually no, because AUS clearly does not a
 4. Click "Load Unpacked" in the Extensions panel and select the BannerPlus ***folder*** that you unzipped
 5. Enjoy BannerPlus!
 
-## Helping Out
+# Helping Out
 
 If you wish you support me financially, you can easily do that via:
 
@@ -48,6 +48,6 @@ If you wish you support me financially, you can easily do that via:
 * BTC (Bitcoin) (`1H4Brazgb9LK2RS1xyn1ktiieZhH9mdey`)
 * Etherum (`0xa9e344fec0bc76243915Ef099f1cb936798DD3d9`)
 
-## Questions / Bugs / Feature Suggestions
+# Questions / Bugs / Feature Suggestions
 
 You can ask questions or report bugs or even suggest features either by emailing me at [b00073615@aus.edu](mailto:b00073615@aus.edu) or by opening an issue on Github.
