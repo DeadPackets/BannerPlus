@@ -1,4 +1,4 @@
 {
-	"version": "0.1",
-	"changelog": ["First release!"]
+	"version": "1.0",
+	"changelog": ["First official release!", "Added auto update functionality"]
 }

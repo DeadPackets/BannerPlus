@@ -86,18 +86,38 @@ function initializeSwitches(tab) {
   });
 }
 
-// function checkForUpdates() {
-//   fetch(chrome.extension.getURL('version.json'))
-//     .then((response) => {
-
-//     });
-// }
+function checkForUpdates() {
+  fetch(chrome.extension.getURL('version.json'))
+    .then((response) => {
+      response.json().then((json) => {
+        fetch('https://raw.githubusercontent.com/DeadPackets/BannerPlus/master/version.json')
+          .then((responseGit) => {
+            responseGit.json().then((jsonGit) => {
+              if (parseFloat(jsonGit.version) > parseFloat(json.version)) {
+                let content = jsonGit.changelog.map((item) => {return (" - " + item);})
+                content = content.join("\n");
+                swal({
+                  title: `New Update! (v${jsonGit.version})`,
+                  text: `BannerPlus has a new update!\n\nHere is what's new:\n${content}`,
+                  buttons: ['Later', 'Update']
+                }).then((value) => {
+                  //If they picked to update
+                  if (value) {
+                      window.open('https://github.com/DeadPackets/BannerPlus/releases/latest');
+                  }
+                })
+              }
+            })
+          })
+      })
+    });
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   getCurrentTabUrl((tab) => {
     if (tab.url.indexOf('banner.aus.edu') > -1) {
       initializeSwitches(tab);
-      //checkForUpdates();
+      checkForUpdates();
     } else {
       swal({
         title: 'Sorry!',

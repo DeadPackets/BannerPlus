@@ -26,7 +26,6 @@
     "storage",
     "webRequest",
     "webRequestBlocking",
-    "*://banner.aus.edu/*",
-    "*://github.com/DeadPackets/*"
+    "*://banner.aus.edu/*"
   ]
 }
