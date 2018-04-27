@@ -65,7 +65,6 @@ function initializeSwitches(tab) {
     }
 
     chrome.storage.local.get([name], (result) => {
-      console.log(result);
       if (result[name]) {
         new Switch(item, {
           size: 'default',
@@ -87,10 +86,18 @@ function initializeSwitches(tab) {
   });
 }
 
+// function checkForUpdates() {
+//   fetch(chrome.extension.getURL('version.json'))
+//     .then((response) => {
+
+//     });
+// }
+
 document.addEventListener('DOMContentLoaded', () => {
   getCurrentTabUrl((tab) => {
     if (tab.url.indexOf('banner.aus.edu') > -1) {
       initializeSwitches(tab);
+      //checkForUpdates();
     } else {
       swal({
         title: 'Sorry!',

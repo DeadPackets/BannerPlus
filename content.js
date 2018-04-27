@@ -39,6 +39,22 @@ const tweaks = {
 			$('span').css('font-size', '1em');
 		}
 	},
+	boldFont: () => {
+		let font = "'Yantramanav', sans-serif";
+		let url = "https://fonts.googleapis.com/css?family=Yantramanav:900";
+		if (document.getElementsByName('mainFrame')[0] !== undefined) {
+			let frame = $(document.getElementsByName('mainFrame')[0].contentWindow.document);
+			$(frame).find('head').append(`<style>@import url('${url}');</style>`);
+			$(frame).find('head').append(`<style>body * { font-family: ${font} !important;}</style>`);
+			$(frame).find('.title').css('font-size', '1.4em');
+			$(frame).find('span').css('font-size', '1em');
+		} else {
+			$('head').append(`<style>@import url('${url}');</style>`);
+			$('head').append(`<style>body * { font-family: ${font} !important;}</style>`);
+			$('.title').css('font-size', '1.4em');
+			$('span').css('font-size', '1em');
+		}
+	},
 	biggerButtons: () => {
 		$('input[type="submit"]').css('font-size', '18px');
 	},
@@ -61,7 +77,14 @@ const tweaks = {
 				}
 			}
 		})
-
+	},
+	blockAUSImages: () => {
+		if (document.getElementsByName('mainFrame')[0] !== undefined) {
+			let frame = $(document.getElementsByName('mainFrame')[0].contentWindow.document);
+			$(frame).find('img').remove();
+		} else {
+			$('img').remove();
+		}
 	}
 }
 
