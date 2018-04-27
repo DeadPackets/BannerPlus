@@ -1,5 +1,7 @@
 ![BannerPlus](logo.png)
 
+# BannerPlus
+
 BannerPlus (Banner+) is a chrome extension that adds some tweaks to [AUS's Banner page](https://banner.aus.edu). The functionality of these tweaks range from visual effects to improving page load times.
 
 ---
