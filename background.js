@@ -31,7 +31,7 @@ chrome.storage.onChanged.addListener((changes) => {
 	let keys = Object.keys(changes);
 
 	keys.forEach((key) => {
-		options[key] = changes[key];
+		options[key] = changes[key].newValue;
 	})
 
 })
