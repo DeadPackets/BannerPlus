@@ -14,7 +14,7 @@ I am not responsible for you using this tool, and any actions AUS may or may not
 * Removing the AUS banner (Easier on the eyes + faster loading times)
 * Automatic Login (with built in incorrect credentials detection)
 * Bigger titles (why not?)
-* Chaning of fonts (why not? +1)
+* Changing of fonts (why not? +1)
 * [BETA] Removing all images (Much faster loading times)
 * More coming soon!
 
