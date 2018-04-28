@@ -81,9 +81,9 @@ const tweaks = {
 	blockAUSImages: () => {
 		if (document.getElementsByName('mainFrame')[0] !== undefined) {
 			let frame = $(document.getElementsByName('mainFrame')[0].contentWindow.document);
-			$(frame).find('img').remove();
+			$(frame).attr('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
 		} else {
-			$('img').remove();
+			$('img').attr('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
 		}
 	}
 }
