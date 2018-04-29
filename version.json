@@ -1,4 +1,4 @@
 {
-	"version": "1.28",
-	"changelog": ["Added useless feature to remove Banner version text"]
+	"version": "1.3",
+	"changelog": ["Proper releases from now on! Extensions will be packed as .crx files and not zips!"]
 }
