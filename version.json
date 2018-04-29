@@ -1,4 +1,4 @@
 {
-	"version": "1.0",
-	"changelog": ["Added an actual logo", "Fixed incorrect titles", "Huge improvement on blocking images (still in beta though)"]
+	"version": "1.2",
+	"changelog": ["Added auto refresh for tweaks", "Added a tweak to prevent auto logout from banner", "Fixed blocking tweaks not working properly on windows", "Added disclaimer note"]
 } 

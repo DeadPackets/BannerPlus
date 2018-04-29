@@ -15,6 +15,10 @@
       height: 100%;
     }
 
+    html {
+      overflow: auto;
+    }
+
     .mainTitle {
       padding: none;
       font-size: 40px;
@@ -202,13 +206,17 @@
 </head>
 
 <body>
-  <h1 class="mainTitle">Banner+</h1>
+  <h1 class="mainTitle">Banner+<version style="font-size: 12px;"></version></h1>
   <hr />
   <div id="container" class="container justify-content-center">
     <h3>Tweaks</h3>
     <div class="optionDiv">
       <span class="optionText">Persistent Login</span>
       <input type="checkbox" name="persistentLogin" class="checkbox-switch" />
+    </div>
+    <div class="optionDiv">
+      <span class="optionText">Prevent Inactive Logout</span>
+      <input type="checkbox" name="preventInactive" class="checkbox-switch" />
     </div>
     <div class="optionDiv">
       <span class="optionText">Big Titles</span>
@@ -249,6 +257,12 @@
     <div class="optionDiv">
       <span class="optionText">Password: </span>
       <input class="autoInput" type="password" name="password" />
+    </div>
+    <hr />
+    <h3>Settings</h3>
+    <div class="optionDiv">
+      <span class="optionText">Disable Auto Refresh</span>
+      <input type="checkbox" name="disableAutoRefresh" class="checkbox-switch" />
     </div>
     <br />
   </div>

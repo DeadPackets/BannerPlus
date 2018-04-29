@@ -7,6 +7,12 @@ const tweaks = {
 		} else {
 			if (!items.hideAUSHeader) {
 				$('<iframe src="/top.htm" style="height: 85px; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;" name="topFrame" scrolling="NO" noresize=""></iframe>').prependTo('body');
+				if (items.blockAUSImages) {
+					setTimeout(() => {
+						let frame = $(document.getElementsByName('topFrame')[0].contentWindow.document);
+						$(frame).find('img').attr('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
+					}, 350)
+				}
 			}
 		}
 	},
@@ -81,9 +87,26 @@ const tweaks = {
 	blockAUSImages: () => {
 		if (document.getElementsByName('mainFrame')[0] !== undefined) {
 			let frame = $(document.getElementsByName('mainFrame')[0].contentWindow.document);
-			$(frame).attr('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
+			$(frame).find('img').attr('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
 		} else {
 			$('img').attr('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
+		}
+
+		if (document.getElementsByName('topFrame')[0] !== undefined) {
+			let frame = $(document.getElementsByName('topFrame')[0].contentWindow.document);
+			$(frame).find('img').attr('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
+		}
+	},
+	disableAutoRefresh: () => {
+		return true;
+	},
+	preventInactive: () => {
+		if (document.getElementsByName('mainFrame')[0] !== undefined) {
+			console.error('Prevent Inactive Login is not supported without Persistent Login enabled.');
+		} else {
+			setTimeout(() => {
+				location.reload();
+			}, 300000)
 		}
 	}
 }
