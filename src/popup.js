@@ -153,10 +153,11 @@ function displayDisclaimer(cb) {
 document.addEventListener('DOMContentLoaded', () => {
   getCurrentTabUrl((tab) => {
     if (tab.url.indexOf('banner.aus.edu') > -1) {
-      displayDisclaimer(() => {
         initializeSwitches(tab);
         checkForUpdates();
-      })
+        displayDisclaimer(() => {
+          return true;
+        })
     } else {
       swal({
         title: 'Sorry!',
