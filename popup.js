@@ -51,16 +51,15 @@ function clickSwitch(name, currentValue, tab) {
     let data = {};
     data[name] = currentValue;
     chrome.storage.local.set(data);
-
-    chrome.storage.local.get(['disableAutoRefresh'], (result) => {
-      if (result.disableAutoRefresh !== true) {
-        chrome.tabs.reload(tab.id, {
-          bypassCache: true
-        });
-      }
-    })
-
   }
+
+  chrome.storage.local.get(['disableAutoRefresh'], (result) => {
+    if (result.disableAutoRefresh !== true) {
+      chrome.tabs.reload(tab.id, {
+        bypassCache: true
+      });
+    }
+  })
 }
 
 function initializeSwitches(tab) {

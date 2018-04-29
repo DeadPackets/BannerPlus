@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "BannerPlus",
   "description": "Makes banner better.",
-  "version": "1.2",
+  "version": "1.25",
   "icons": {
     "128": "assets/icons/128.png"
   },

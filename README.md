@@ -11,11 +11,11 @@ I am not responsible for you using this tool, and any actions AUS may or may not
 # Features (so far)
 
 * Persistent Login (Refreshing does not log you out + faster loading times)
+* Prevent Inactive Logout after 15 minutes
 * Removing the AUS banner (Easier on the eyes + faster loading times)
 * Automatic Login (with built in incorrect credentials detection)
 * Bigger titles (why not?)
 * Changing of fonts (why not? +1)
-* [BETA] Removing all images (Much faster loading times)
 * More coming soon!
 
 # FAQ (Frequently Asked Questions)

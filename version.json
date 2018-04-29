@@ -1,4 +1,4 @@
 {
-	"version": "1.2",
-	"changelog": ["Added auto refresh for tweaks", "Added a tweak to prevent auto logout from banner", "Fixed blocking tweaks not working properly on windows", "Added disclaimer note"]
-} 
+	"version": "1.25",
+	"changelog": ["Removed blocking images (I gave up)", "Fixed auto refresh for Auto Login", "Removed large footer"]
+}

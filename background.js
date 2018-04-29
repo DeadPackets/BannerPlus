@@ -16,22 +16,20 @@ chrome.webRequest.onBeforeRequest.addListener(
 		urls: ["*://banner.aus.edu/top.htm"]
 	}, ["blocking"]);
 
-chrome.webRequest.onBeforeRequest.addListener(
-	function (details) {
-		console.log(options);
-		return {
-			cancel: options.blockAUSImages
-		};
-	}, {
-		urls: ["*://banner.aus.edu/*"],
-		types: ["image"]
-	}, ["blocking"]);
+// chrome.webRequest.onBeforeRequest.addListener(
+// 	function (details) {
+// 		console.log(options);
+// 		return {
+// 			cancel: options.blockAUSImages
+// 		};
+// 	}, {
+// 		urls: ["*://banner.aus.edu/*"],
+// 		types: ["image"]
+// 	}, ["blocking"]);
 
 chrome.storage.onChanged.addListener((changes) => {
 	let keys = Object.keys(changes);
-
 	keys.forEach((key) => {
 		options[key] = changes[key].newValue;
 	})
-
 })
