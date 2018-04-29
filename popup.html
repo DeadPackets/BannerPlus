@@ -15,10 +15,6 @@
       height: 100%;
     }
 
-    html {
-      overflow: auto;
-    }
-
     .mainTitle {
       padding: none;
       font-size: 40px;
@@ -206,7 +202,9 @@
 </head>
 
 <body>
-  <h1 class="mainTitle">Banner+<version style="font-size: 12px;"></version></h1>
+  <h1 class="mainTitle">Banner+
+    <version style="font-size: 12px;"></version>
+  </h1>
   <hr />
   <div id="container" class="container justify-content-center">
     <h3>Tweaks</h3>
@@ -238,6 +236,10 @@
       <span class="optionText">Bigger Buttons</span>
       <input type="checkbox" name="biggerButtons" class="checkbox-switch" />
     </div>
+    <div class="optionDiv">
+        <span class="optionText">Remove Banner Version</span>
+        <input type="checkbox" name="removeBannerReleaseVersion" class="checkbox-switch" />
+      </div>
     <!-- <hr />
     <h3>Beta Tweaks</h3>
     <div class="optionDiv">
@@ -269,9 +271,9 @@
 
   <div class="footer">
     <center>
-        <h6 class="footerText">Developed and designed by DeadPackets</h6>
+      <h6 class="footerText">Developed and designed by DeadPackets</h6>
     </center>
-    </div>
+  </div>
   </div>
 </body>
 

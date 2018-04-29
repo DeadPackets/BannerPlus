@@ -1,4 +1,4 @@
 {
-	"version": "1.25",
-	"changelog": ["Removed blocking images (I gave up)", "Fixed auto refresh for Auto Login", "Removed large footer"]
+	"version": "1.28",
+	"changelog": ["Added useless feature to remove Banner version text"]
 }
