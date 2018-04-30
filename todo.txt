@@ -1,4 +1,8 @@
-- First time setup
-- Multiple themes
-- Shortcuts
-- Improved css (big project)
+## Tweak Ideas
+- None. Need more.
+
+## BannerPlus Ideas
+- Themes
+- Improved CSS (hm?)
+- Animations (hmmm?)
+
