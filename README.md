@@ -36,7 +36,7 @@ Sure, pay me a million AED in cash. (Actually no, because AUS clearly does not a
 
 1. Download the latest version of BannerPlus as a .crx file from the [latest release](https://github.com/DeadPackets/BannerPlus/releases/latest)
 2. Keep the file when Chrome tells you it's suspicious
-3. Head to your [Extensions panel](chrome://extensions)
+3. Head to your Extensions panel (chrome://extensions)
 4. Drag the .crx file into the page to install the extension
 5. Enjoy BannerPlus!
 
