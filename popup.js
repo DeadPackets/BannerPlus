@@ -46,12 +46,14 @@ function clickSwitch(name, currentValue, tab) {
       chrome.storage.local.set({
         autoLogin: false
       });
+
+      return;
     })
-  } else {
-    let data = {};
-    data[name] = currentValue;
-    chrome.storage.local.set(data);
   }
+
+  let data = {};
+  data[name] = currentValue;
+  chrome.storage.local.set(data);
 
   chrome.storage.local.get(['disableAutoRefresh'], (result) => {
     if (result.disableAutoRefresh !== true) {
@@ -141,7 +143,9 @@ function displayDisclaimer(cb) {
       }).then((value) => {
         //If they picked to update
         if (value) {
-          chrome.storage.local.set({agreeToServeSatan: true})
+          chrome.storage.local.set({
+            agreeToServeSatan: true
+          })
           cb();
         } else {
           window.close();
@@ -154,11 +158,11 @@ function displayDisclaimer(cb) {
 document.addEventListener('DOMContentLoaded', () => {
   getCurrentTabUrl((tab) => {
     if (tab.url.indexOf('banner.aus.edu') > -1) {
-        initializeSwitches(tab);
-        checkForUpdates();
-        displayDisclaimer(() => {
-          return true;
-        })
+      initializeSwitches(tab);
+      checkForUpdates();
+      displayDisclaimer(() => {
+        return true;
+      })
     } else {
       swal({
         title: 'Sorry!',

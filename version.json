@@ -1,4 +1,4 @@
 {
-	"version": "1.32",
-	"changelog": ["Fixed everything that was broken so far", "Fixed users not being able to install extension"]
+	"version": "1.7",
+	"changelog": ["Added Dark Theme", "Added GrayScale Theme", "Added Highlighting Closed or Open Courses", "Added Bigger Checkboxes", "Seperated tweaks into categories", "Added the hiding of Banner's indimidating warning message", "Fixed auto login not turning off after being enabled"]
 }

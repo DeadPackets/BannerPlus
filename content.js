@@ -84,6 +84,43 @@ const tweaks = {
 			}
 		})
 	},
+	showHolds: () => {
+		if (document.getElementsByName('mainFrame')[0] !== undefined) {
+			console.error('Show Holds is only enabled with Persistent Login');
+		} else {
+			if (document.location.href.indexOf('P_ViewHold') < 0) {
+				let url = 'https://banner.aus.edu/axp3b21h/owa/bwskoacc.P_ViewHold';
+				let frame = document.createElement("iframe");
+				frame.setAttribute("src", url);
+				frame.style.width = "0";
+				frame.style.height = "0";
+				document.body.appendChild(frame);
+				frame.addEventListener("load", function () {
+					let text = $(this.contentWindow.document).find('.warningtext').text()
+					if (text.indexOf('No holds exist') > -1) {
+						return true;
+					} else {
+						if ($(this.contentWindow.document)[0].body.innerHTML.indexOf('User Login') > -1) {
+							console.warn('You are not logged in for View Holds to work!');
+						} else {
+							new Noty({
+								type: 'warning',
+								text: 'You have some registration holds! Click here to see them.',
+								theme: 'relax',
+								timeout: 5000,
+								progressBar: true,
+								buttons: [
+									Noty.button('Go', 'btn', () => {
+										window.location.replace(url);
+									})
+								]
+							}).show();
+						}
+					}
+				});
+			}
+		}
+	},
 	blockAUSImages: () => {
 		if (document.getElementsByName('mainFrame')[0] !== undefined) {
 			let frame = $(document.getElementsByName('mainFrame')[0].contentWindow.document);
@@ -115,6 +152,89 @@ const tweaks = {
 			$(frame).find('.releasetext').remove();
 		} else {
 			$('.releasetext').remove();
+		}
+	},
+	enableDarkTheme: () => {
+		if (document.getElementsByName('mainFrame')[0] !== undefined) {
+			console.error('Dark Theme is not supported without Persistent Login');
+		} else {
+			$('body').css('background-color', '#0C0F0E');
+			$('body').css('filter', 'grayscale(100%) invert(100%) brightness(80%)');
+		}
+	},
+	enableGrayScale: () => {
+		if (document.getElementsByName('mainFrame')[0] !== undefined) {
+			console.error('Gray Scale is not supported without Persistent Login');
+		} else {
+			$('body').css('filter', 'grayscale(100%)');
+		}
+	},
+	makeBannerScream: () => {
+		if (document.getElementsByName('mainFrame')[0] !== undefined) {
+			let frame = $(document.getElementsByName('mainFrame')[0].contentWindow.document);
+			$(frame).find('html').css('text-transform', 'uppercase');
+			$(frame).find('td').css('text-transform', 'uppercase');
+			$(frame).find('input').css('text-transform', 'uppercase');
+			$(frame).find('option').css('text-transform', 'uppercase');
+		} else {
+			$('html').css('text-transform', 'uppercase');
+			$('td').css('text-transform', 'uppercase');
+			$('input').css('text-transform', 'uppercase');
+			$('option').css('text-transform', 'uppercase');
+		}
+	},
+	makeBannerQuiet: () => {
+		if (document.getElementsByName('mainFrame')[0] !== undefined) {
+			let frame = $(document.getElementsByName('mainFrame')[0].contentWindow.document);
+			$(frame).find('html').css('text-transform', 'lowercase');
+			$(frame).find('td').css('text-transform', 'lowercase');
+			$(frame).find('input').css('text-transform', 'lowercase');
+			$(frame).find('option').css('text-transform', 'lowercase');
+		} else {
+			$('html').css('text-transform', 'lowercase');
+			$('td').css('text-transform', 'lowercase');
+			$('input').css('text-transform', 'lowercase');
+			$('option').css('text-transform', 'lowercase');
+		}
+	},
+	highlightClosedClasses: () => {
+		if (document.getElementsByName('mainFrame')[0] !== undefined) {
+			console.error('Highlighting classes not supported without Persistent Login');
+		} else {
+			if (document.location.href.indexOf('P_GetCrse') > -1) {
+				$('abbr[title="Closed"]').parent().parent().css('background-color', 'rgba(255, 0, 0, 0.4)');
+			}
+		}
+	},
+	highlightOpenClasses: () => {
+		if (document.getElementsByName('mainFrame')[0] !== undefined) {
+			console.error('Highlighting classes not supported without Persistent Login');
+		} else {
+			if (document.location.href.indexOf('P_GetCrse') > -1) {
+				$('input[type="checkbox"]').parent().parent().css('background-color', 'rgba(0, 255, 0, 0.4)');
+			}
+		}
+	},
+	biggerCheckboxes: () => {
+		if (document.getElementsByName('mainFrame')[0] !== undefined) {
+			let frame = $(document.getElementsByName('mainFrame')[0].contentWindow.document);
+			$(frame).find('input[type="checkbox"]').css('transform', 'scale(2)')
+		} else {
+			$('input[type="checkbox"]').css('transform', 'scale(2)');
+		}
+	},
+	hideBannerWarning: () => {
+		if (document.getElementsByName('mainFrame')[0] !== undefined) {
+			let frame = $(document.getElementsByName('mainFrame')[0].contentWindow.document);
+			let text = $(frame).find('.infotext').text();
+			if (text.indexOf('The use of software or tools that constantly refresh') > -1) {
+				$(frame).find('.infotext').parent().parent().remove();
+			}
+		} else {
+			let text = $('.infotext').text();
+			if (text.indexOf('The use of software or tools that constantly refresh') > -1) {
+				$('.infotext').parent().parent().remove();
+			}
 		}
 	}
 }
