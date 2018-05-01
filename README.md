@@ -34,10 +34,10 @@ Sure, pay me a million AED in cash. (Actually no, because AUS clearly does not a
 
 # How to Install
 
-1. Download the latest version of BannerPlus as a .crx file from the [latest release](https://github.com/DeadPackets/BannerPlus/releases/latest)
-2. Keep the file when Chrome tells you it's suspicious
-3. Head to your Extensions panel (chrome://extensions)
-4. Drag the .crx file into the page to install the extension
+1. Download the latest version of BannerPlus as a zip file from the [latest release](https://github.com/DeadPackets/BannerPlus/releases/latest) (.zip version)
+2. Unzip the downloaded file into a folder named "BannerPlus"
+3. Enable developer mode in your Google Chrome by navitaging to the [Extensions panel](chrome://extensions) and ticking the "Developer Mode" checkbox
+4. Click "Load Unpacked" in the Extensions panel and select the BannerPlus ***folder*** that you unzipped
 5. Enjoy BannerPlus!
 
 # Helping Out

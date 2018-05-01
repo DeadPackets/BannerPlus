@@ -1,4 +1,4 @@
 {
-	"version": "1.31",
-	"changelog": ["Proper releases from now on! Extensions will be packed as .crx files and not zips!", "Fixed broken update function"]
+	"version": "1.32",
+	"changelog": ["Fixed everything that was broken so far", "Fixed users not being able to install extension"]
 }
