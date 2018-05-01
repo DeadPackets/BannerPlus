@@ -102,9 +102,10 @@ function checkForUpdates() {
         //Set current version
         $('version').text("(v" + json.version + ")");
 
-        fetch('https://raw.githubusercontent.com/DeadPackets/BannerPlus/master/version.json')
+        fetch('https://raw.githubusercontent.com/DeadPackets/BannerPlus/master/src/version.json')
           .then((responseGit) => {
             responseGit.json().then((jsonGit) => {
+              console.log(`Current Version: ${json.version} and Latest Version: ${jsonGit.version}`);
               if (parseFloat(jsonGit.version) > parseFloat(json.version)) {
                 let content = jsonGit.changelog.map((item) => {
                   return (" - " + item);
