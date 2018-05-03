@@ -1,8 +1,9 @@
 ## Tweak Ideas
 - None. Need more.
+- Bring back blocking images
 
 ## BannerPlus Ideas
 - Themes
 - Improved CSS (hm?)
 - Animations (hmmm?)
-
+- Disable clear cache refresh (make it an option)
