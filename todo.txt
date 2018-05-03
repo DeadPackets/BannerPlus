@@ -1,6 +1,7 @@
 ## Tweak Ideas
 - None. Need more.
 - Bring back blocking images
+- 60/20/20 for fee payments
 
 ## BannerPlus Ideas
 - Themes
