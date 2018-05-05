@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "BannerPlus",
   "description": "Makes banner better.",
-  "version": "2.0",
+  "version": "2.1",
   "icons": {
     "128": "assets/icons/128.png"
   },
@@ -16,7 +16,7 @@
   },
   "content_scripts": [{
     "matches": ["*://banner.aus.edu/*"],
-    "js": ["/assets/jquery.slim.min.js", "content.js", "/assets/noty.min.js"],
+    "js": ["/assets/jquery.slim.min.js", "/assets/FileSaver.js", "/assets/moment.min.js", "content.js", "/assets/noty.min.js"],
     "css": ["/assets/noty.min.css", "/assets/emoji.css"]
   }],
   "permissions": [
