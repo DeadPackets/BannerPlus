@@ -40,17 +40,18 @@ let crnInfo = chrome.contextMenus.create({
 });
 
 let termCodes = [{
-	name: "Fall 2018",
-	code: 201910
-},
-{
-	name: "Summer 2018",
-	code: 201830
-},
-{
-	name: "Summer II 2018",
-	code: 201840
-}]
+		name: "Fall 2018",
+		code: 201910
+	},
+	{
+		name: "Summer 2018",
+		code: 201830
+	},
+	{
+		name: "Summer II 2018",
+		code: 201840
+	}
+]
 
 termCodes.forEach((item) => {
 	chrome.contextMenus.create({
@@ -58,7 +59,9 @@ termCodes.forEach((item) => {
 		contexts: ["selection"],
 		parentId: crnInfo,
 		onclick: (info, tab) => {
-			chrome.tabs.create({url: `https://banner.aus.edu/axp3b21h/owa/bwckschd.p_disp_detail_sched?term_in=${item.code}&crn_in=${info.selectionText}`})
+			chrome.tabs.create({
+				url: `https://banner.aus.edu/axp3b21h/owa/bwckschd.p_disp_detail_sched?term_in=${item.code}&crn_in=${info.selectionText}`
+			})
 		}
 	})
 })

@@ -14,13 +14,11 @@
   "background": {
     "scripts": ["background.js"]
   },
-  "content_scripts": [
-    {
-      "matches": ["*://banner.aus.edu/*"],
-      "js": ["/assets/jquery.slim.min.js", "content.js", "/assets/noty.min.js"],
-      "css": ["/assets/noty.min.css", "/assets/emoji.css"]
-    }
-  ],
+  "content_scripts": [{
+    "matches": ["*://banner.aus.edu/*"],
+    "js": ["/assets/jquery.slim.min.js", "content.js", "/assets/noty.min.js"],
+    "css": ["/assets/noty.min.css", "/assets/emoji.css"]
+  }],
   "permissions": [
     "activeTab",
     "tabs",

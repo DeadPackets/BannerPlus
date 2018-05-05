@@ -255,15 +255,13 @@ const tweaks = {
 	},
 	emojiGrades: () => {
 		if (document.getElementsByName('mainFrame')[0] !== undefined) {
-			let frame = $(document.getElementsByName('mainFrame')[0].contentWindow.document);
+			console.log('Emoji Grades not supported without Persistent Login');
 		} else {
-			if (document.location.href.indexOf('P_ViewGrde') > -1)
-			{
+			if (document.location.href.indexOf('P_ViewGrde') > -1) {
 				$('tbody td:nth-child(7)').each((i, item) => {
 					let grade = $(item).text()
 					let emoji = '';
-					switch(grade)
-					{
+					switch (grade) {
 						case 'A':
 							emoji = 'fire';
 							break;
@@ -338,5 +336,5 @@ $(() => {
 			}
 		})
 	})
-	
+
 })
