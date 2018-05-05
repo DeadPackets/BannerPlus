@@ -1,4 +1,4 @@
 {
-	"version": "1.32",
-	"changelog": ["Added Dark Theme", "Added GrayScale Theme", "Added Highlighting Closed or Open Courses", "Added Bigger Checkboxes", "Seperated tweaks into categories", "Added the hiding of Banner's indimidating warning message", "Fixed auto login not turning off after being enabled"]
+	"version": "2.0",
+	"changelog": ["Added Dark Theme", "Added GrayScale Theme", "Added Highlighting Closed or Open Courses", "Added Bigger Checkboxes", "Seperated tweaks into categories", "Added the hiding of Banner's indimidating warning message", "Fixed auto login not turning off after being enabled", "Added BannerPlus Dark Theme", "Added Cats to Banner", "Now you can see your grades in emojis!"]
 }

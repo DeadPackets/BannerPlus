@@ -98,11 +98,13 @@ const tweaks = {
 				frame.addEventListener("load", function () {
 					let text = $(this.contentWindow.document).find('.warningtext').text()
 					if (text.indexOf('No holds exist') > -1) {
+						console.log("No holds found!")
 						return true;
 					} else {
 						if ($(this.contentWindow.document)[0].body.innerHTML.indexOf('User Login') > -1) {
 							console.warn('You are not logged in for View Holds to work!');
 						} else {
+							console.log(text);
 							new Noty({
 								type: 'warning',
 								text: 'You have some registration holds! Click here to see them.',
@@ -236,6 +238,93 @@ const tweaks = {
 				$('.infotext').parent().parent().remove();
 			}
 		}
+	},
+	mainMeowMenu: () => {
+		if (document.getElementsByName('mainFrame')[0] !== undefined) {
+			let frame = $(document.getElementsByName('mainFrame')[0].contentWindow.document);
+			$(frame).find('img[alt="aus"]').each((i, item) => {
+				$(item).attr('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
+				$(item).attr('src', 'https://cataas.com/cat/cute?he=80&wi=80&id=' + Math.random())
+			})
+		} else {
+			$('img[alt="aus"]').each((i, item) => {
+				$(item).attr('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
+				$(item).attr('src', 'https://cataas.com/cat/cute?he=80&wi=80&id=' + Math.random())
+			})
+		}
+	},
+	emojiGrades: () => {
+		if (document.getElementsByName('mainFrame')[0] !== undefined) {
+			let frame = $(document.getElementsByName('mainFrame')[0].contentWindow.document);
+		} else {
+			if (document.location.href.indexOf('P_ViewGrde') > -1)
+			{
+				$('tbody td:nth-child(7)').each((i, item) => {
+					let grade = $(item).text()
+					let emoji = '';
+					switch(grade)
+					{
+						case 'A':
+							emoji = 'fire';
+							break;
+						case 'A-':
+							emoji = '--1';
+							break;
+						case 'B+':
+							emoji = 'blush';
+							break;
+						case 'B':
+							emoji = 'smiley';
+							break;
+						case 'B-':
+							emoji = 'dissapointed';
+							break;
+						case 'C+':
+							emoji = 'slightly_smiling_face';
+							break;
+						case 'C':
+							emoji = 'upside_down_face';
+							break;
+						case 'C-':
+							emoji = 'joy';
+							break;
+						case 'D':
+							emoji = 'skull';
+							break;
+						case 'F':
+							emoji = '100';
+							break;
+					}
+
+					$(item).append(`<i style="float: right;" class="em em-${emoji}"></i>`)
+				})
+
+				$('tr td:nth-child(6) .rightaligntext').each((i, item) => {
+					let gpa = parseFloat($(item).text());
+					console.log(gpa);
+
+					if (gpa == 4.0) {
+						emoji = 'fire';
+					} else if (gpa >= 3.5 && gpa <= 3.99) {
+						emoji = 'sunglasses'
+					} else if (gpa >= 3.0 && gpa <= 3.49) {
+						emoji = 'smile'
+					} else if (gpa >= 2.5 && gpa <= 2.99) {
+						emoji = 'expressionless'
+					} else if (gpa >= 2.0 && gpa <= 2.49) {
+						emoji = 'upside_down_face'
+					} else if (gpa >= 1.5 && gpa <= 1.99) {
+						emoji = 'joy'
+					} else if (gpa >= 1.0) {
+						emoji = 'skull'
+					} else {
+						emoji = '100'
+					}
+
+					$(item).append(`<i style="float: right;" class="em em-${emoji}"></i>`)
+				})
+			}
+		}
 	}
 }
 
@@ -249,4 +338,5 @@ $(() => {
 			}
 		})
 	})
+	
 })

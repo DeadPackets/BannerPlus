@@ -49,6 +49,12 @@ function clickSwitch(name, currentValue, tab) {
 
       return;
     })
+  } else if (name == 'darkTheme') {
+    chrome.storage.sync.set({
+      darkTheme: currentValue
+    }, () => {
+      window.close();
+    });
   }
 
   let data = {};
@@ -74,24 +80,51 @@ function initializeSwitches(tab) {
         $('[name="password"]').val(result.password);
       })
     }
-
-    chrome.storage.local.get([name], (result) => {
-      if (result[name]) {
-        new Switch(item, {
-          size: 'default',
-          checked: true,
-          onChange: (value) => {
-            clickSwitch(name, value, tab);
+    chrome.storage.sync.get(['darkTheme'], (result) => {
+      if (result.darkTheme) {
+        chrome.storage.local.get([name], (result) => {
+          if (result[name]) {
+            new Switch(item, {
+              size: 'default',
+              onSwitchColor: '#2d89ef',
+              offSwitchColor: '#202020',
+              checked: true,
+              onChange: (value) => {
+                clickSwitch(name, value, tab);
+              }
+            });
+          } else {
+            new Switch(item, {
+              size: 'default',
+              onSwitchColor: '#2d89ef',
+              offSwitchColor: '#202020',
+              checked: false,
+              onChange: (value) => {
+                clickSwitch(name, value, tab);
+              }
+            });
           }
-        });
+        })
       } else {
-        new Switch(item, {
-          size: 'default',
-          checked: false,
-          onChange: (value) => {
-            clickSwitch(name, value, tab);
+        chrome.storage.local.get([name], (result) => {
+          if (result[name]) {
+            new Switch(item, {
+              size: 'default',
+              checked: true,
+              onChange: (value) => {
+                clickSwitch(name, value, tab);
+              }
+            });
+          } else {
+            new Switch(item, {
+              size: 'default',
+              checked: false,
+              onChange: (value) => {
+                clickSwitch(name, value, tab);
+              }
+            });
           }
-        });
+        })
       }
     })
   });
@@ -155,9 +188,21 @@ function displayDisclaimer(cb) {
   })
 }
 
+function darkTheme() {
+  chrome.storage.sync.get(['darkTheme'], (result) => {
+    if (result.darkTheme) {
+      $('body').css('background-color', '#363636');
+      $('span').css('color', '#c5c5c5');
+      $('h3').css('color', 'white');
+      $('hr').css('border-color', '#8f8f8f');
+    }
+  })
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   getCurrentTabUrl((tab) => {
     if (tab.url.indexOf('banner.aus.edu') > -1) {
+      darkTheme();
       initializeSwitches(tab);
       checkForUpdates();
       displayDisclaimer(() => {
