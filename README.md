@@ -15,11 +15,14 @@ I am not responsible for you using this tool, and any actions AUS may or may not
 * Alert you if you have holds
 * Removing the AUS banner (Easier on the eyes + faster loading times)
 * Automatic Login (with built in incorrect credentials detection)
+* Automatically highlight closed sections in the registration menu
 * Bigger titles (why not?)
 * Highlight open and closed courses to make registration easier
 * Adding themes to Banner
 * Changing of fonts (why not? +1)
-* Some fun stuff as well
+* Some fun stuff as well such as emojis for grades, random cat pictures, and MAKING BANNER SCREAM
+* Automatic refresh when applying tweaks
+* Right clicking on selected CRNs will let you see some info about that CRN (New!!)
 * More coming soon!
 
 # FAQ (Frequently Asked Questions)
