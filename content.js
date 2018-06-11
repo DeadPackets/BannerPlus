@@ -96,14 +96,18 @@ const tweaks = {
 				frame.style.height = "0";
 				document.body.appendChild(frame);
 				frame.addEventListener("load", function () {
-					let text = $(this.contentWindow.document).find('.warningtext').text()
-					if (text.indexOf('No holds exist') > -1) {
+					let text = $(this.contentWindow.document).find('.warningtext').text();
+					if (text.indexOf('No holds exist') > -1 || $($(this.contentWindow.document)[0]).find('input[name="_pd"]').length !== 0) {
 						console.log("No holds found!")
 						return true;
 					} else {
 						if ($(this.contentWindow.document)[0].body.innerHTML.indexOf('User Login') > -1) {
 							console.warn('You are not logged in for View Holds to work!');
 						} else {
+							console.log($($(this.contentWindow.document)[0]).find('input[name="_pd"]').length);
+							console.log($(this.contentWindow.document)[0].find('input[name="_pd"]').length);
+							console.log($($(this.contentWindow.document)[0]).find('input[name="_pd"]'));
+							console.log($($(this.contentWindow.document)[0]).find('input').length);
 							console.log(frame.contentWindow.document);
 							new Noty({
 								type: 'warning',
@@ -119,6 +123,7 @@ const tweaks = {
 							}).show();
 						}
 					}
+					$(this).hide();
 				});
 			}
 		}
@@ -219,6 +224,75 @@ const tweaks = {
 			}
 		}
 	},
+	highlightEnrolledClasses: () => {
+		if (document.getElementsByName('mainFrame')[0] !== undefined) {
+			console.error('Highlighting classes not supported without Persistent Login');
+		} else {
+			if (document.location.href.indexOf('P_GetCrse') > -1) {
+				$('table caption ~ tbody tr td.dddefault:nth-child(1)').each((i, item) => {
+					let text = $(item).text();
+					if (text.length < 4 && text !== 'C' && text !== 'SR') {
+						$(item).parent().css('background-color', '#a0a0a0');
+					}
+				})
+			}
+		}
+	},
+	showTimeConflicts: () => {
+		if (document.getElementsByName('mainFrame')[0] !== undefined) {
+			console.error('Highlighting classes not supported without Persistent Login');
+		} else {
+			if (document.location.href.indexOf('P_GetCrse') > -1 && $('caption').length !== 0) {
+				let times = $('table caption ~ tbody tr td.dddefault:nth-child(10)');
+				let url = 'https://banner.aus.edu/axp3b21h/owa/bwskcrse.P_CrseSchdDetl';
+				let frame = document.createElement("iframe");
+				frame.setAttribute("src", url);
+				frame.style.width = "0";
+				frame.style.height = "0";
+				document.body.appendChild(frame);
+				frame.addEventListener("load", function () {
+					$(this.contentWindow.document).find('table:nth-child(4)').children('tbody').find('tr').each((i, item) => {
+						if (i !== 0) {
+							let info = {
+								crn: $(item).find('td:nth-child(1)').text(),
+								course: $(item).find('td:nth-child(2)').text(),
+								title: $(item).find('td:nth-child(3)').text(),
+								startDate: $(item).find('td:nth-child(7)').text(),
+								endDate: $(item).find('td:nth-child(8)').text(),
+								days: $(item).find('td:nth-child(9)').text(),
+								times: $(item).find('td:nth-child(10)').text(),
+								location: $(item).find('td:nth-child(11)').text(),
+								instructor: $(item).find('td:nth-child(12)').text()
+							}
+
+							if (info.crn.length >= 4) {
+								times.each((i, item) => {
+									let days = $(item).parent().find('td.dddefault:nth-child(9)').text().split('');
+
+									days.forEach((day) => {
+										if (info.days.indexOf(day) > -1) {
+											let registeredStart = new Date(info.startDate + " " + $(item).text().split('-')[0]).getTime();
+											let registeredEnd = new Date(info.startDate + " " + $(item).text().split('-')[1]).getTime();
+											let courseStart = new Date(info.startDate + " " + info.times.split(' - ')[0]).getTime();
+											let courseEnd = new Date(info.startDate + " " + info.times.split(' - ')[1]).getTime();
+											if ((courseStart >= registeredStart && courseStart <= registeredEnd) || (courseEnd >= registeredStart && courseEnd <= registeredEnd)) {
+												let text = $(item).parent().find('td.dddefault:nth-child(1)').text();
+												if (!(text.length < 4 && text !== 'C' && text !== 'SR')) {
+													$(item).parent().css('background-color', '#FEEFB3');
+													$(item).append(`\n<br />[CONFLICT WITH ${info.title} (${info.crn}/${info.course}) || ${info.times}]`);
+												}
+											}
+										}
+									})
+								})
+							}
+						}
+					});
+					$(this).hide();
+				})
+			}
+		}
+	},
 	biggerCheckboxes: () => {
 		if (document.getElementsByName('mainFrame')[0] !== undefined) {
 			let frame = $(document.getElementsByName('mainFrame')[0].contentWindow.document);
@@ -277,7 +351,7 @@ const tweaks = {
 							emoji = 'smiley';
 							break;
 						case 'B-':
-							emoji = 'dissapointed';
+							emoji = 'disapointed';
 							break;
 						case 'C+':
 							emoji = 'slightly_smiling_face';
@@ -294,6 +368,12 @@ const tweaks = {
 						case 'F':
 							emoji = '100';
 							break;
+						case 'XF':
+							emoji = 'hankey';
+							break;
+						default:
+							emoji = 'question';
+							break;
 					}
 
 					$(item).append(`<i style="float: right;" class="em em-${emoji}"></i>`)
@@ -301,8 +381,6 @@ const tweaks = {
 
 				$('tr td:nth-child(6) .rightaligntext').each((i, item) => {
 					let gpa = parseFloat($(item).text());
-					console.log(gpa);
-
 					if (gpa == 4.0) {
 						emoji = 'fire';
 					} else if (gpa >= 3.5 && gpa <= 3.99) {
@@ -330,7 +408,7 @@ const tweaks = {
 		if (document.getElementsByName('mainFrame')[0] !== undefined) {
 			console.error('Downloading the calendar is not supported without persistent login')
 		} else {
-			if (document.location.href.indexOf('P_CrseSchdDetl') > -1) {
+			if (document.location.href.indexOf('P_CrseSchdDetl') > -1 && document.location.href.indexOf('bwskfshd') == -1) {
 				$('.pagebodydiv').first().append('<button class="downloadICS button">Download ICS File</button>')
 				$('.button').attr('style', 'background-color: #990000; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px');
 				$('.downloadICS').click(() => {
@@ -350,7 +428,7 @@ const tweaks = {
 						const minute = pad(date.getUTCMinutes());
 						const second = pad(date.getUTCSeconds());
 						return `${year}${month}${day}T${hour}${minute}${second}Z`;
-					  }
+					}
 
 					$('table:nth-child(4)').children('tbody').find('tr').each((i, item) => {
 						if (i !== 0) {
@@ -365,6 +443,7 @@ const tweaks = {
 								location: $(item).find('td:nth-child(11)').text(),
 								instructor: $(item).find('td:nth-child(12)').text()
 							}
+							console.log(info);
 
 							if (info.crn.length >= 4) {
 								info.days.split('').forEach((item) => {

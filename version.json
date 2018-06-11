@@ -1,4 +1,4 @@
 {
-	"version": "2.1",
-	"changelog": ["Added Dark Theme", "Added GrayScale Theme", "Added Highlighting Closed or Open Courses", "Added Bigger Checkboxes", "Seperated tweaks into categories", "Added the hiding of Banner's indimidating warning message", "Fixed auto login not turning off after being enabled", "Added BannerPlus Dark Theme", "Added Cats to Banner", "Now you can see your grades in emojis!", "Bunch of general code improvements", "Bunch of fixes", "You can now download your schedule!"]
+	"version": "2.2",
+	"changelog": ["Fixed View Registration Holds", "Added highlighting of classes you are currently enrolled in", "You can now know if a class has a time conflict right on the registration page!"]
 }
