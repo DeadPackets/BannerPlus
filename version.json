@@ -1,4 +1,4 @@
 {
-	"version": "2.5",
+	"version": "2.6",
 	"changelog": ["Fixed View Registration Holds", "Added highlighting of classes you are currently enrolled in", "You can now know if a class has a time conflict right on the registration page!"]
 }

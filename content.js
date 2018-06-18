@@ -64,6 +64,15 @@ const tweaks = {
 	biggerButtons: () => {
 		$('input[type="submit"]').css('font-size', '18px');
 	},
+	evadeBlocking: () => {
+		let test = $('.stripe').text().match(/url|requested|rejected/ig);
+		if (test) {
+			if (test.length === 3) {
+				chrome.runtime.sendMessage({signal: "evadeBlocking"});
+			}
+		}
+
+	},
 	autoLogin: () => {
 		chrome.storage.sync.get(['username', 'password'], (result) => {
 			if (document.getElementsByName('mainFrame')[0] !== undefined) {
@@ -104,11 +113,6 @@ const tweaks = {
 						if ($(this.contentWindow.document)[0].body.innerHTML.indexOf('User Login') > -1) {
 							console.warn('You are not logged in for View Holds to work!');
 						} else {
-							console.log($($(this.contentWindow.document)[0]).find('input[name="_pd"]').length);
-							console.log($(this.contentWindow.document)[0].find('input[name="_pd"]').length);
-							console.log($($(this.contentWindow.document)[0]).find('input[name="_pd"]'));
-							console.log($($(this.contentWindow.document)[0]).find('input').length);
-							console.log(frame.contentWindow.document);
 							new Noty({
 								type: 'warning',
 								text: 'You have some registration holds! Click here to see them.',

@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "BannerPlus",
-  "version": "2.5",
+  "version": "2.6",
   "description": "Makes banner better.",
   "author": "DeadPackets",
   "icons": {
@@ -24,9 +24,10 @@
     "activeTab",
     "tabs",
     "storage",
+    "cookies",
     "contextMenus",
     "webRequest",
     "webRequestBlocking",
-    "*://banner.aus.edu/*"
+    "*://*.aus.edu/*"
   ]
 }

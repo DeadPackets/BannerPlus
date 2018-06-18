@@ -65,3 +65,17 @@ termCodes.forEach((item) => {
 		}
 	})
 })
+
+chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
+	if (msg.signal === 'evadeBlocking') {
+		chrome.cookies.getAll({domain: "banner.aus.edu"}, function(cookies) {
+				for (var i=0; i < cookies.length; i++) {
+					chrome.cookies.remove({url: "https://banner.aus.edu" + cookies[i].path, name: cookies[i].name});
+				}
+
+				chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+					chrome.tabs.update(tabs[0].id, {url: tabs[0].url});
+				});
+		})
+	}
+});
