@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "BannerPlus",
-  "version": "2.65",
-  "description": "Makes banner better.",
+  "version": "2.7",
+  "description": "Make Banner Great Again.",
   "author": "DeadPackets",
   "icons": {
     "128": "assets/icons/128.png"
