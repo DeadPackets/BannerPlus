@@ -1,7 +1,10 @@
 ![BannerPlus](logo.png)
 
-# BannerPlus
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 
+# BannerPlus
 BannerPlus (Banner+) is a chrome extension that adds some tweaks to [AUS's Banner page](https://banner.aus.edu). The functionality of these tweaks range from visual effects to improving page load times.
 
 # DISCLAIMER
@@ -13,6 +16,8 @@ I am not responsible for you using this tool, and any actions AUS may or may not
 * Persistent Login (Refreshing does not log you out + faster loading times)
 * Prevent Inactive Logout after 15 minutes
 * Alert you if you have holds
+* Alert you if you have due fees
+* Evade AUS' blocking mechanism
 * Removing the AUS banner (Easier on the eyes + faster loading times)
 * Automatic Login (with built in incorrect credentials detection)
 * Automatically highlight closed sections in the registration menu
@@ -22,7 +27,7 @@ I am not responsible for you using this tool, and any actions AUS may or may not
 * Changing of fonts (why not? +1)
 * Some fun stuff as well such as emojis for grades, random cat pictures, and MAKING BANNER SCREAM
 * Automatic refresh when applying tweaks
-* Right clicking on selected CRNs will let you see some info about that CRN (New!!)
+* Right clicking on selected CRNs will let you see some info about that CRN
 * More coming soon!
 
 # FAQ (Frequently Asked Questions)
