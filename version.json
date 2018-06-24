@@ -1,4 +1,4 @@
 {
-	"version": "2.7",
-	"changelog": ["Added option to see any fees due automatically."]
+	"version": "2.71",
+	"changelog": ["Added option to see any fees due automatically.", "Added extension to chrome webstore!"]
 }
