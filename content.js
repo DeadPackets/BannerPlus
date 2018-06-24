@@ -144,7 +144,7 @@ const tweaks = {
 				frame.style.height = "0";
 				document.body.appendChild(frame);
 				frame.addEventListener("load", function () {
-					let fees = parseFloat($(this.contentWindow.document).find('table.datadisplaytable tbody tr:nth-child(8) th:nth-child(2)').text())
+					let fees = parseFloat($(this.contentWindow.document).find('table.datadisplaytable tbody tr:nth-last-child(3) th:nth-child(2)').text())
 					if (fees <= 0) {
 						console.log("No due fees found!")
 						return true;
