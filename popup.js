@@ -153,7 +153,7 @@ function checkForUpdates() {
                 }).then((value) => {
                   //If they picked to update
                   if (value) {
-                    window.open('https://github.com/DeadPackets/BannerPlus/releases/latest');
+                    window.open('https://deadpackets.github.io/BannerPlus');
                   }
                 })
               }

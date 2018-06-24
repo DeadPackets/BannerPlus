@@ -46,6 +46,9 @@ Sure, pay me a million AED in cash. (Actually no, because AUS clearly does not a
 
 # How to Install
 
+1. Go to [BannerPlus' website](https://deadpackets.github.io/BannerPlus)
+2. Press Install to Chrome.
+3. Done!
 
 # Helping Out
 
