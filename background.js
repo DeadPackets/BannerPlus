@@ -74,7 +74,7 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
 				}
 
 				chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-					chrome.tabs.update(tabs[0].id, {url: tabs[0].url});
+					chrome.tabs.update(tabs[0].id, {url: 'https://banner.aus.edu/axp3b21h/owa/twbkwbis.P_GenMenu'});
 				});
 		})
 	}
