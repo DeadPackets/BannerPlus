@@ -60,4 +60,4 @@ If you wish you support me financially, you can easily do that via:
 
 # Questions / Bugs / Feature Suggestions
 
-You can ask questions or report bugs or even suggest features either by emailing me at [b00073615@aus.edu](mailto:b00073615@aus.edu) or by opening an issue on Github.
+You can ask questions or report bugs or even suggest features either by emailing me at b00073615 [at] aus [dot] edu or by opening an issue on Github.

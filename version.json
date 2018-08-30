@@ -1,4 +1,4 @@
 {
-	"version": "2.72",
-	"changelog": ["Fixed something with the automatic fees due", "Added option to see any fees due automatically.", "Added extension to chrome webstore!"]
+	"version": "2.75",
+	"changelog": ["Added color schedule feature", "Added the ability to evade 'Not Found' pages", "General fixes"]
 }

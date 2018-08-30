@@ -131,7 +131,7 @@ function initializeSwitches(tab) {
 }
 
 function checkForUpdates() {
-  fetch(chrome.extension.getURL('version.json'))
+  fetch(chrome.extension.getURL('manifest.json'))
     .then((response) => {
       response.json().then((json) => {
         //Set current version
