@@ -118,12 +118,13 @@ const tweaks = {
 						color: '#acd17b'
 					},
 					{
-						color: '#788b9e'					},
+						color: '#c9c9ff'
+					},
 					{
 						color: '#b9c5ec'
 					},
 					{
-						color: '#6787B7'
+						color: '#e6f3e3'
 					},
 					{
 						color: '#ffdfcb'
@@ -132,7 +133,7 @@ const tweaks = {
 						color: '#ffcd55'
 					},
 					{
-						color: '#635f62'
+						color: '#ffbdbd'
 					}
 				]
 	
