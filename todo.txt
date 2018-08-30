@@ -7,4 +7,3 @@
 - Themes
 - Improved CSS (hm?)
 - Animations (hmmm?)
-- Disable clear cache refresh (make it an option)
