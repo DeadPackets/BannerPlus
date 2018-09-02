@@ -2,8 +2,19 @@
 - None. Need more.
 - Bring back blocking images
 - 60/20/20 for fee payments
+- Check if registration is open
 
 ## BannerPlus Ideas
 - Themes
 - Improved CSS (hm?)
 - Animations (hmmm?)
+
+## FIXES
+- 404/Not Found pages (URGENT)
+- Add download schedule in Day Time page
+
+## Improvements
+- Better colors in color coded schedule tweak
+- Easier ability to change auto-login details
+- Make schedule download a button inside bannerplus instead of in the page
+- Add help for stuff
