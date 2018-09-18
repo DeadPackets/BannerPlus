@@ -1,4 +1,4 @@
-function persistentLogin() {
+function persistentLogin(items) {
     if (document.getElementsByName('mainFrame')[0] !== undefined) {
         window.location.replace(document.getElementsByName('mainFrame')[0].contentWindow.location.href);
     } else {
