@@ -201,7 +201,7 @@ function darkTheme() {
 
 document.addEventListener('DOMContentLoaded', () => {
   getCurrentTabUrl((tab) => {
-    if (tab.url.indexOf('banner.aus.edu') > -1) {
+    if (tab.url.indexOf('banner.') > -1) {
       darkTheme();
       initializeSwitches(tab);
       checkForUpdates();
