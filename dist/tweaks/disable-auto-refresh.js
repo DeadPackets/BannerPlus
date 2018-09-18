@@ -1,3 +1,3 @@
 function disableAutoRefresh() {
-    return true;
+	return true;
 }
