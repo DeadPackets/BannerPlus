@@ -16,7 +16,7 @@
     "scripts": ["background.js"]
   },
   "content_scripts": [{
-    "matches": ["*://banner.lssc.edu/*"],
+    "matches": ["*://banner.aus.edu/*"],
     "js": [
       "/assets/jquery.slim.min.js",
       "/assets/FileSaver.js",
