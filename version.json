@@ -1,4 +1,4 @@
 {
-	"version": "2.75",
-	"changelog": ["Added color schedule feature", "Added the ability to evade 'Not Found' pages", "General fixes"]
+	"version": "3.0",
+	"changelog": ["Complete rebase of code structure", "Improved evade 404 tweak", "General fixes"]
 }

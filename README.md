@@ -61,3 +61,7 @@ If you wish you support me financially, you can easily do that via:
 # Questions / Bugs / Feature Suggestions
 
 You can ask questions or report bugs or even suggest features either by emailing me at b00073615 [at] aus [dot] edu or by opening an issue on Github.
+
+# Credits/Thanks
+
+* Thanks to [@waseemshahwaan](https://github.com/waseemshahwan) for fixing my file and code structure and for all your contributions.
