@@ -1,3 +1,3 @@
 function hideAUSHeader() {
-    return true;
+	return true;
 }
