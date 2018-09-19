@@ -28,6 +28,8 @@ I am not responsible for you using this tool, and any actions AUS may or may not
 * Some fun stuff as well such as emojis for grades, random cat pictures, and MAKING BANNER SCREAM
 * Automatic refresh when applying tweaks
 * Right clicking on selected CRNs will let you see some info about that CRN
+* Downloading your class schedule as a file that can be imported into any calendar app or service
+* Color coding your schedule to make recognition of seperate courses
 * More coming soon!
 
 # FAQ (Frequently Asked Questions)
@@ -44,6 +46,14 @@ Well, probably! See below for more information on how to request a feature.
 
 Sure, pay me a million AED in cash. (Actually no, because AUS clearly does not allow tools that speed up registration processes.)
 
+#### Are you stealing my data? Can this harm my computer in any way?
+
+If you can take my word for it, no. If you cannot take my word for it, the code is right here infront of you. All the code here is exactly the code inside the extension. You can unpack the extension yourself and check...
+
+#### I'm a programmer and I want to contribute!
+
+Sure! That would be amazing! All PRs are welcome and if you don't know what that is then check the information below about helping out!
+
 # How to Install
 
 1. Go to [BannerPlus' website](https://deadpackets.github.io/BannerPlus)
@@ -55,8 +65,7 @@ Sure, pay me a million AED in cash. (Actually no, because AUS clearly does not a
 If you wish you support me financially, you can easily do that via:
 
 * My PayPal ([link](https://paypal.me/DeadPackets))
-* BTC (Bitcoin) (`1H4Brazgb9LK2RS1xyn1ktiieZhH9mdey`)
-* Etherum (`0xa9e344fec0bc76243915Ef099f1cb936798DD3d9`)
+* BTC (Bitcoin) (`1H4Brazgb9LK2RS1xyn1ktiieZhH9mdey`) [Send me an email if you pick to donate using BTC]
 
 # Questions / Bugs / Feature Suggestions
 
