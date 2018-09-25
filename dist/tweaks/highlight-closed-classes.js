@@ -1,4 +1,5 @@
-function highlightClosedClasses() {
+'use strict';
+function highlightClosedClasses() { // eslint-disable-line no-unused-vars
 	if (document.getElementsByName('mainFrame')[0] !== undefined) {
 		console.error('Highlighting classes not supported without Persistent Login');
 	} else {

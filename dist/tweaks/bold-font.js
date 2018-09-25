@@ -1,4 +1,5 @@
-function boldFont() {
+'use strict';
+function boldFont() { // eslint-disable-line no-unused-vars
 	const font = '\'Yantramanav\', sans-serif';
 	const url = 'https://fonts.googleapis.com/css?family=Yantramanav:900';
 	if (document.getElementsByName('mainFrame')[0] !== undefined) {

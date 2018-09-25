@@ -1,4 +1,5 @@
-function emojiGrades() {
+'use strict';
+function emojiGrades() { // eslint-disable-line no-unused-vars
 	if (document.getElementsByName('mainFrame')[0] !== undefined) {
 		console.log('Emoji Grades not supported without Persistent Login');
 	} else {
@@ -50,7 +51,7 @@ function emojiGrades() {
 
 			$('tr td:nth-child(6) .rightaligntext').each((i, item) => {
 				const gpa = parseFloat($(item).text());
-				if (gpa == 4.0) {
+				if (gpa === 4.0) {
 					emoji = 'fire';
 				} else if (gpa >= 3.5 && gpa <= 3.99) {
 					emoji = 'sunglasses';

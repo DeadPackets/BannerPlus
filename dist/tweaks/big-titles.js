@@ -1,4 +1,5 @@
-function bitTitles() {
+'use strict';
+function bigTitles() { // eslint-disable-line no-unused-vars
 	if (document.getElementsByName('mainFrame')[0] !== undefined) {
 		const frame = $(document.getElementsByName('mainFrame')[0].contentWindow.document);
 		$(frame).find('.title').css('font-size', '1.5em');

@@ -1,4 +1,5 @@
-function showDueFees() {
+'use strict';
+function showDueFees() { // eslint-disable-line no-unused-vars
 	if (document.getElementsByName('mainFrame')[0] !== undefined) {
 		console.error('Show Due Fees is only enabled with Persistent Login');
 	} else {

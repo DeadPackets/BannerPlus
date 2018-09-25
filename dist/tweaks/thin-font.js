@@ -1,4 +1,5 @@
-function thinFont() {
+'use strict';
+function thinFont() { // eslint-disable-line no-unused-vars
 	const font = '\'Yantramanav\', sans-serif';
 	const url = 'https://fonts.googleapis.com/css?family=Yantramanav:300';
 	if (document.getElementsByName('mainFrame')[0] !== undefined) {

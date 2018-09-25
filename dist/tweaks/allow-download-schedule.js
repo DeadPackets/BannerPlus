@@ -1,8 +1,9 @@
-function allowDownloadSchedule() {
+'use strict';
+function allowDownloadSchedule() { // eslint-disable-line no-unused-vars
 	if (document.getElementsByName('mainFrame')[0] !== undefined) {
 		console.error('Downloading the calendar is not supported without persistent login');
 	} else {
-		if (document.location.href.indexOf('P_CrseSchdDetl') > -1 && document.location.href.indexOf('bwskfshd') == -1) {
+		if (document.location.href.indexOf('P_CrseSchdDetl') > -1 && document.location.href.indexOf('bwskfshd') === -1) {
 			$('.pagebodydiv').first().append('<button class="downloadICS button">Download ICS File</button>');
 			$('.button').attr('style', 'background-color: #990000; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px');
 			$('.downloadICS').click(() => {
@@ -25,7 +26,7 @@ function allowDownloadSchedule() {
 				}
 
 				$('table:nth-child(4)').children('tbody').find('tr').each((i, item) => {
-					if (i == 0) return;
+					if (i === 0) return;
 
 					const info = {
 						crn: $(item).find('td:nth-child(1)').text(),
@@ -79,7 +80,7 @@ function allowDownloadSchedule() {
 					}
 				});
 				cal = cal + 'END:VCALENDAR';
-				cal = cal.split('\n').filter((i) => i != '').map((i) => i.trim()).join('\n');
+				cal = cal.split('\n').filter((i) => i !== '').map((i) => i.trim()).join('\n');
 				const blob = new Blob([cal], {
 					type: 'text/calendar'
 				});

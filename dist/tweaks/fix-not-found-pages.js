@@ -1,4 +1,5 @@
-function fixNotFoundPages() {
+'use strict';
+function fixNotFoundPages() { // eslint-disable-line no-unused-vars
 	if (document.getElementsByName('mainFrame')[0] !== undefined) {
 		console.warn('No support without persistent login.');
 	} else {

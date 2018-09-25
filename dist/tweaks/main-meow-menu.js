@@ -1,4 +1,5 @@
-function mainMeowMenu() {
+'use strict';
+function mainMeowMenu() { // eslint-disable-line no-unused-vars
 	if (document.getElementsByName('mainFrame')[0] !== undefined) {
 		const frame = $(document.getElementsByName('mainFrame')[0].contentWindow.document);
 		$(frame).find('img[alt="aus"]').each((i, item) => {

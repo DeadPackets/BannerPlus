@@ -17,10 +17,18 @@ checks:
       threshold: 75
   nested-control-flow:
     config:
-      threshold: 4
+      threshold: 8
   return-statements:
     config:
       threshold: 4
+  similar-code:
+    enabled: true
+    config:
+      threshold: 10
+  identical-code:
+    enabled: true
+    config:
+      threshold: 10
 plugins:
  eslint:
   enabled: true

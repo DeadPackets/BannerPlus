@@ -1,4 +1,5 @@
-function autoLogin() {
+'use strict';
+function autoLogin() { // eslint-disable-line no-unused-vars
 	chrome.storage.sync.get(['username', 'password'], (result) => {
 		if (document.getElementsByName('mainFrame')[0] !== undefined) {
 			//I need absolute URLs for the new page load event to fire :/

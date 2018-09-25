@@ -1,3 +1,4 @@
+'use strict';
 $(() => {
 	chrome.storage.local.get(null, (items) => {
 		const keys = Object.keys(items);

@@ -1,4 +1,5 @@
-function colorCodedSchedule() {
+'use strict';
+function colorCodedSchedule() { // eslint-disable-line no-unused-vars
 	if (document.getElementsByName('mainFrame')[0] !== undefined) {
 		console.warn('I am not bothered to support color coded schedule without persistent login enabled.');
 	} else {

@@ -1,4 +1,5 @@
-function enableDarkTheme() {
+'use strict';
+function enableDarkTheme() { // eslint-disable-line no-unused-vars
 	if (document.getElementsByName('mainFrame')[0] !== undefined) {
 		console.error('Dark Theme is not supported without Persistent Login');
 	} else {

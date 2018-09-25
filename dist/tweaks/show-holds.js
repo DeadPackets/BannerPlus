@@ -1,4 +1,5 @@
-function showHolds() {
+'use strict';
+function showHolds() { // eslint-disable-line no-unused-vars
 	if (document.getElementsByName('mainFrame')[0] !== undefined) {
 		console.error('Show Holds is only enabled with Persistent Login');
 	} else {

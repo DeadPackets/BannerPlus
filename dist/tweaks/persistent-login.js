@@ -1,4 +1,5 @@
-function persistentLogin(items) {
+'use strict';
+function persistentLogin(items) { // eslint-disable-line no-unused-vars
 	if (document.getElementsByName('mainFrame')[0] !== undefined) {
 		window.location.replace(document.getElementsByName('mainFrame')[0].contentWindow.location.href);
 	} else {

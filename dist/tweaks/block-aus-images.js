@@ -1,4 +1,5 @@
-function blockAUSImages() {
+'use strict';
+function blockAUSImages() { // eslint-disable-line no-unused-vars
 	if (document.getElementsByName('mainFrame')[0] !== undefined) {
 		const frame = $(document.getElementsByName('mainFrame')[0].contentWindow.document);
 		$(frame).find('img').attr('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');

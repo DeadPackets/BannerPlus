@@ -1,3 +1,4 @@
+'use strict';
 const options = {};
 
 chrome.storage.local.get(['hideAUSHeader', 'blockAUSImages'], (result) => {
@@ -64,7 +65,7 @@ termCodes.forEach((item) => {
 	});
 });
 
-chrome.runtime.onMessage.addListener((msg, sender) => {
+chrome.runtime.onMessage.addListener((msg) => {
 	if (msg.signal === 'evadeBlocking') {
 		chrome.cookies.getAll({domain: 'banner.aus.edu'}, (cookies) => {
 			for (let i=0; i < cookies.length; i++) {
