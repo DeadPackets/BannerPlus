@@ -3,7 +3,12 @@ module.exports = {
 		"browser": true,
 		"commonjs": true,
 		"es6": true,
-		"node": true
+		"webextensions": true
+	},
+	"globals": {
+		"$": true,
+		"Switch": true,
+		"swal": true
 	},
 	"extends": "eslint:recommended",
 	"rules": {
@@ -27,6 +32,7 @@ module.exports = {
 		"eqeqeq": ["error", "always"],
 		"no-var": "error",
 		"prefer-const": "error",
-		"arrow-parens": ["error", "always"]
+		"arrow-parens": ["error", "always"],
+		"no-console": "off"
 	}
 };

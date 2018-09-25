@@ -6,7 +6,7 @@ chrome.storage.local.get(['hideAUSHeader', 'blockAUSImages'], (result) => {
 });
 
 chrome.webRequest.onBeforeRequest.addListener(
-	(details) => {
+	() => {
 		return {
 			cancel: options.hideAUSHeader
 		};
@@ -56,7 +56,7 @@ termCodes.forEach((item) => {
 		title: item.name,
 		contexts: ['selection'],
 		parentId: crnInfo,
-		onclick: (info, tab) => {
+		onclick: (info) => {
 			chrome.tabs.create({
 				url: `https://banner.aus.edu/axp3b21h/owa/bwckschd.p_disp_detail_sched?term_in=${item.code}&crn_in=${info.selectionText}`
 			});
@@ -64,7 +64,7 @@ termCodes.forEach((item) => {
 	});
 });
 
-chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener((msg, sender) => {
 	if (msg.signal === 'evadeBlocking') {
 		chrome.cookies.getAll({domain: 'banner.aus.edu'}, (cookies) => {
 			for (let i=0; i < cookies.length; i++) {

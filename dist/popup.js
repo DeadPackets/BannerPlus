@@ -35,7 +35,7 @@ function checkAutoLogin(value, cb) {
 
 function clickSwitch(name, currentValue, tab) {
 
-	if (name == 'autoLogin') {
+	if (name === 'autoLogin') {
 		checkAutoLogin(currentValue, () => {
 			swal({
 				title: 'Oops!',
@@ -48,7 +48,7 @@ function clickSwitch(name, currentValue, tab) {
 
 			return;
 		});
-	} else if (name == 'darkTheme') {
+	} else if (name === 'darkTheme') {
 		chrome.storage.sync.set({
 			darkTheme: currentValue
 		}, () => {
@@ -73,7 +73,7 @@ function initializeSwitches(tab) {
 	$('.checkbox-switch').each((i, item) => {
 		const name = $(item).attr('name');
 
-		if (name == 'autoLogin') {
+		if (name === 'autoLogin') {
 			chrome.storage.sync.get(['username', 'password'], (result) => {
 				$('[name="username"]').val(result.username);
 				$('[name="password"]').val(result.password);
