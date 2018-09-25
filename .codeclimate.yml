@@ -22,11 +22,11 @@ checks:
     config:
       threshold: 4
   similar-code:
-    enabled: true
+    enabled: false
     config:
       threshold: 100
   identical-code:
-    enabled: true
+    enabled: false
     config:
       threshold: 100
 plugins:
