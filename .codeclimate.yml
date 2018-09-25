@@ -24,11 +24,11 @@ checks:
   similar-code:
     enabled: true
     config:
-      threshold: 10
+      threshold: 100
   identical-code:
     enabled: true
     config:
-      threshold: 10
+      threshold: 100
 plugins:
  eslint:
   enabled: true
