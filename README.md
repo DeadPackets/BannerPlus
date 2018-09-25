@@ -7,7 +7,8 @@
 ![Chrome Web Store](https://img.shields.io/chrome-web-store/users/hhmambngepaijefabkocngdaaihpaimb.svg)
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/hhmambngepaijefabkocngdaaihpaimb.svg)](https://chrome.google.com/webstore/detail/bannerplus/hhmambngepaijefabkocngdaaihpaimb)
 ![GitHub last commit](https://img.shields.io/github/last-commit/deadpackets/bannerplus.svg)
-
+![Github version](https://img.shields.io/badge/dynamic/json.svg?label=github%20version&url=https%3A%2F%2Fraw.githubusercontent.com%2FDeadPackets%2FBannerPlus%2Fmaster%2Fversion.json&query=version&colorB=blue)
+[![Maintainability](https://api.codeclimate.com/v1/badges/9ac285b6bbf378239e76/maintainability)](https://codeclimate.com/github/DeadPackets/BannerPlus/maintainability)
 
 # BannerPlus
 BannerPlus (Banner+) is a chrome extension that adds some tweaks to [AUS's Banner page](https://banner.aus.edu). The functionality of these tweaks range from visual effects to improving page load times.
