@@ -3,6 +3,11 @@
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+![Chrome Web Store](https://img.shields.io/chrome-web-store/rating/hhmambngepaijefabkocngdaaihpaimb.svg)
+![Chrome Web Store](https://img.shields.io/chrome-web-store/users/hhmambngepaijefabkocngdaaihpaimb.svg)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/hhmambngepaijefabkocngdaaihpaimb.svg)](https://chrome.google.com/webstore/detail/bannerplus/hhmambngepaijefabkocngdaaihpaimb)
+![GitHub last commit](https://img.shields.io/github/last-commit/deadpackets/bannerplus.svg)
+
 
 # BannerPlus
 BannerPlus (Banner+) is a chrome extension that adds some tweaks to [AUS's Banner page](https://banner.aus.edu). The functionality of these tweaks range from visual effects to improving page load times.
@@ -29,7 +34,7 @@ I am not responsible for you using this tool, and any actions AUS may or may not
 * Automatic refresh when applying tweaks
 * Right clicking on selected CRNs will let you see some info about that CRN
 * Downloading your class schedule as a file that can be imported into any calendar app or service
-* Color coding your schedule to make recognition of seperate courses
+* Color coding your schedule to make recognition of seperate courses easier
 * More coming soon!
 
 # FAQ (Frequently Asked Questions)
