@@ -21,3 +21,18 @@ checks:
   return-statements:
     config:
       threshold: 4
+plugins:
+ eslint:
+  enabled: true
+exclude_patterns:
+- "config/"
+- "db/"
+- "features/"
+- "**/node_modules/"
+- "script/"
+- "**/spec/"
+- "**/test/"
+- "**/tests/"
+- "**/vendor/"
+- "**/*.d.ts"
+- "**/assets/"
