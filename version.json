@@ -1,4 +1,4 @@
 {
-	"version": "3.0",
-	"changelog": ["Complete rebase of code structure", "Improved evade 404 tweak", "General fixes"]
+	"version": "3.1",
+	"changelog": ["(v3.1) Improvements to quality and speed of code", "Complete rebase of code structure", "Improved evade 404 tweak", "General fixes"]
 }
