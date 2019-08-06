@@ -3,7 +3,6 @@ const options = {};
 
 chrome.storage.local.get(['hideAUSHeader', 'blockAUSImages'], (result) => {
 	options.hideAUSHeader = result.hideAUSHeader;
-	options.blockAUSImages = result.blockAUSImages;
 });
 
 chrome.webRequest.onBeforeRequest.addListener(
@@ -15,17 +14,6 @@ chrome.webRequest.onBeforeRequest.addListener(
 		urls: ['*://banner.aus.edu/top.htm']
 	}, ['blocking']);
 
-// chrome.webRequest.onBeforeRequest.addListener(
-// 	function (details) {
-// 		console.log(options);
-// 		return {
-// 			cancel: options.blockAUSImages
-// 		};
-// 	}, {
-// 		urls: ["*://banner.aus.edu/*"],
-// 		types: ["image"]
-// 	}, ["blocking"]);
-
 chrome.storage.onChanged.addListener((changes) => {
 	const keys = Object.keys(changes);
 	keys.forEach((key) => {
@@ -33,37 +21,38 @@ chrome.storage.onChanged.addListener((changes) => {
 	});
 });
 
-const crnInfo = chrome.contextMenus.create({
-	title: 'Get Information About This CRN',
-	contexts: ['selection']
-});
+//TODO: Fix
+// const crnInfo = chrome.contextMenus.create({
+// 	title: 'Get Information About This CRN',
+// 	contexts: ['selection']
+// });
 
-const termCodes = [{
-	name: 'Fall 2018',
-	code: 201910
-},
-{
-	name: 'Summer 2018',
-	code: 201830
-},
-{
-	name: 'Summer II 2018',
-	code: 201840
-}
-];
+// const termCodes = [{
+// 	name: 'Fall 2018',
+// 	code: 201910
+// },
+// {
+// 	name: 'Summer 2018',
+// 	code: 201830
+// },
+// {
+// 	name: 'Summer II 2018',
+// 	code: 201840
+// }
+// ];
 
-termCodes.forEach((item) => {
-	chrome.contextMenus.create({
-		title: item.name,
-		contexts: ['selection'],
-		parentId: crnInfo,
-		onclick: (info) => {
-			chrome.tabs.create({
-				url: `https://banner.aus.edu/axp3b21h/owa/bwckschd.p_disp_detail_sched?term_in=${item.code}&crn_in=${info.selectionText}`
-			});
-		}
-	});
-});
+// termCodes.forEach((item) => {
+// 	chrome.contextMenus.create({
+// 		title: item.name,
+// 		contexts: ['selection'],
+// 		parentId: crnInfo,
+// 		onclick: (info) => {
+// 			chrome.tabs.create({
+// 				url: `https://banner.aus.edu/axp3b21h/owa/bwckschd.p_disp_detail_sched?term_in=${item.code}&crn_in=${info.selectionText}`
+// 			});
+// 		}
+// 	});
+// });
 
 chrome.runtime.onMessage.addListener((msg) => {
 	if (msg.signal === 'evadeBlocking') {

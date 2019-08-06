@@ -80,6 +80,7 @@ function initializeSwitches(tab) {
 				$('[name="password"]').val(result.password);
 			});
 		}
+
 		chrome.storage.sync.get(['darkTheme'], (result) => {
 			if (result.darkTheme) {
 				chrome.storage.local.get([name], (result) => {

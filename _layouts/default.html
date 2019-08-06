@@ -15,7 +15,7 @@
       <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
 	  {% if site.github.is_project_page %}
-	    <a href="#" onclick="chrome.webstore.install()" class="btn" id="installButton">Install in Chrome</a>
+	    <a href="https://chrome.google.com/webstore/detail/bannerplus/hhmambngepaijefabkocngdaaihpaimb?hl=en" class="btn" id="installButton">Install in Chrome</a>
 		<a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
       {% endif %}
       {% if site.show_downloads %}
@@ -46,7 +46,7 @@
       </script>
 	{% endif %}
 	<script>
-		fetch('https://raw.githubusercontent.com/DeadPackets/BannerPlus/master/version.json')
+	fetch('https://raw.githubusercontent.com/DeadPackets/BannerPlus/master/version.json')
           .then((responseGit) => {
             responseGit.json().then((jsonGit) => {
               document.getElementById('installButton').innerText = `Install BannerPlus (v${jsonGit.version}) to Chrome`;

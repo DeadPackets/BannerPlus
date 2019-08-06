@@ -23,7 +23,6 @@ I am not responsible for you using this tool, and any actions AUS may or may not
 * Prevent Inactive Logout after 15 minutes
 * Alert you if you have holds
 * Alert you if you have due fees
-* Evade AUS' blocking mechanism
 * Removing the AUS banner (Easier on the eyes + faster loading times)
 * Automatic Login (with built in incorrect credentials detection)
 * Automatically highlight closed sections in the registration menu
@@ -71,7 +70,6 @@ Sure! That would be amazing! All PRs are welcome and if you don't know what that
 If you wish you support me financially, you can easily do that via:
 
 * My PayPal ([link](https://paypal.me/DeadPackets))
-* BTC (Bitcoin) (`1H4Brazgb9LK2RS1xyn1ktiieZhH9mdey`) [Send me an email if you pick to donate using BTC]
 
 # Questions / Bugs / Feature Suggestions
 

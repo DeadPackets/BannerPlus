@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "BannerPlus",
-  "version": "3.1",
+  "version": "4.0",
   "description": "Make Banner Great Again.",
   "author": "DeadPackets",
   "icons": {
@@ -27,7 +27,6 @@
       "/tweaks/big-titles.js",
       "/tweaks/bigger-buttons.js",
       "/tweaks/bigger-checkboxes.js",
-      "/tweaks/block-aus-images.js",
       "/tweaks/bold-font.js",
       "/tweaks/color-coded-schedule.js",
       "/tweaks/disable-auto-refresh.js",
@@ -50,7 +49,8 @@
       "/tweaks/show-due-fees.js",
       "/tweaks/show-holds.js",
       "/tweaks/show-time-conflicts.js",
-      "/tweaks/thin-font.js",
+	  "/tweaks/thin-font.js",
+	  "/tweaks/virtual-schedule.js",
       "content.js"
     ],
     "css": ["/assets/noty.min.css", "/assets/emoji.css"]
